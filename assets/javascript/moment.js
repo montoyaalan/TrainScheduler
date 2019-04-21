@@ -1,10 +1,7 @@
-/****************************************************************************
- ****************************************************************************
-    
-    Configure Firebase
-    
-*****************************************************************************
-*****************************************************************************/
+
+ ///// Configure Firebase
+
+///////////
 const config = {
     "apiKey"           : "AIzaSyDTZzRZokWqHyFnA0T11Hte9ZwJ9QgO4kI",
     "authDomain"       : "train-scheduler-3f682.firebaseapp.com",
@@ -20,23 +17,19 @@ const database = firebase.database();
 
 
 
-/****************************************************************************
- ****************************************************************************
     
-    Train scheduler
+   // Train scheduler
     
-*****************************************************************************
-*****************************************************************************/
 // Global variables
 let trains = [], availableID = 0;
 let myTrain, trainID, arrayID;
 
 
-/****************************************************************************
+
     
-    Set the database behavior
+  ////////  Set the database behavior
     
-*****************************************************************************/
+////////////
 function loadDatabase() {
     // When the page loads, or when a user adds a train
     database.ref().on("child_added", function(snapshot) {
@@ -83,11 +76,9 @@ function loadDatabase() {
 }
 
 
-/****************************************************************************
     
-    Query functions
+  ////////  Query functions
     
-*****************************************************************************/
 function findArrayID() {
     // Find the train in the array
     for (arrayID = 0; arrayID < trains.length; arrayID++) {
@@ -135,11 +126,10 @@ function findNextArrival(train) {
 }
 
 
-/****************************************************************************
+
     
-    Display functions
+   ////// Display functions
     
-*****************************************************************************/
 function displayTime(timeArray) {
     // Get the day, hour, and minute
     let d = timeArray[0];
@@ -195,11 +185,10 @@ function refreshSchedule() {
 }
 
 
-/****************************************************************************
+
     
-    Add, edit, or delete a train
+  //////  Add, edit, or delete a train
     
-*****************************************************************************/
 function switchMode(mode) {
     if (mode === "add") {
         // Reset the fields
@@ -285,11 +274,9 @@ function deleteTrain() {
 }
 
 
-/****************************************************************************
     
-    Wait for user actions
+   ///////// Wait for user actions
     
-*****************************************************************************/
 $(document).ready(function() {
     loadDatabase();
 
