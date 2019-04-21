@@ -1,7 +1,7 @@
 :root {
     /* Define color scheme */
     --color-background    : #f0f2f0;
-    --color-light-brown   : #ebd9a3;
+    --color-light-indigo   : #709ce2be;
     --color-light-blue    : #78b6ed;
     --color-soft-pink     : #ff82cf;
     --color-text          : #202020;
@@ -101,7 +101,7 @@ tr:nth-child(even) {
 }
 
 tr:nth-child(odd) {
-    background-color: var(--color-light-brown);
+    background-color: var(--color-light-indigo);
 }
 
 th {
@@ -148,7 +148,7 @@ input {
 #button_add, #button_delete, #button_edit {
     background-color: var(--color-light-blue);
     color           : var(--color-text-contrast);
-    font-family     : "Quicksand", sans-serif;
+    font-family: 'BenchNine', sans-serif;
     font-size       : 1.15em;
     font-weight     : bold;
     letter-spacing  : 0.03em;
